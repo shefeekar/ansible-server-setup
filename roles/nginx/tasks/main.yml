@@ -1,0 +1,13 @@
+ - name: Update yum cache
+   yum:
+        update_cache: yes
+
+ - name: Install Nginx
+   yum:
+        name: nginx
+        state: latest
+ - name: Ensure Nginx service is running and enabled
+   service:
+        name: nginx
+        state: started
+        enabled: yes      
