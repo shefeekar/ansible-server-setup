@@ -1,0 +1,14 @@
+- name: Setup web servers
+  hosts: webservers
+  become: yes
+  roles:
+  - role: ssh 
+    tags: ["ssh"]
+  - role: base
+    tags: ["base"]
+  - role: nginx
+    tags: ["nginx"]
+  - role: app
+    tags: ["app"]
+  
+    
