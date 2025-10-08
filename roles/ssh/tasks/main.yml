@@ -1,0 +1,4 @@
+---
+- name: Connect to EC2 instance and run a command
+  command: echo "Hello, world"
+  command: uptime
