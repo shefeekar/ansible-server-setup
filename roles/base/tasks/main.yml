@@ -1,0 +1,13 @@
+- name: Update yum cache
+  ansible.builtin.dnf:
+    update_cache: true
+- name: Install common packages
+  ansible.builtin.dnf:
+    name:
+      - git
+      - vim
+    state: present 
+- name: Install fail to ban
+  ansible.builtin.dnf:
+    name: fail2ban
+    state: present    
