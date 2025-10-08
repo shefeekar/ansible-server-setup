@@ -6,8 +6,9 @@
     name:
       - git
       - vim
+      - wget
     state: present 
-- name: Install fail to ban
+- name: Install fail2ban
   ansible.builtin.dnf:
     name: fail2ban
     state: present    
